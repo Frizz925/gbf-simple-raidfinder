@@ -1,0 +1,6 @@
+.env
+config.ini
+__pycache__/
+*.py[cod]
+build
+dist
