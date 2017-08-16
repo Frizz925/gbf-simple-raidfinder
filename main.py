@@ -106,7 +106,7 @@ class RaidListener(tweepy.StreamListener):
 class Autopilot:
     def __init__(self, config):
         self.port = int(config['Autopilot']['Port'])
-        self.interval = int(config['Autopilot']['IntervalInSeconds'])
+        self.interval = float(config['Autopilot']['IntervalInSeconds'])
         self.lastRequest = 0
 
     def elapsed(self):
