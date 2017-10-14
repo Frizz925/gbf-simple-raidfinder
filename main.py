@@ -39,7 +39,7 @@ class RaidListener(tweepy.StreamListener):
         super(RaidListener, self).__init__()
         self.config = config
         self.onTweet = onTweet
-        self.regexp = r'(I need backup!Battle ID: |参加者募集！参戦ID：)([^\n]+)\n([^\n]+)'
+        self.regexp = r'([^\s]+)( :Battle ID\nI need backup!\n| :参戦ID\n参加者募集！\n)(.+)$'
         self.englishBosses = [x.strip() for x in config['Bosses']['English'].split(',')]
         self.japaneseBosses = [x.strip() for x in config['Bosses']['Japanese'].split(',')]
         self.allBosses = self.englishBosses + self.japaneseBosses
@@ -62,7 +62,7 @@ class RaidListener(tweepy.StreamListener):
         index = text.index(match.group(1))
         return {
             'message': text[:index],
-            'code': match.group(2),
+            'code': match.group(1),
             'boss': match.group(3)
         }
 
