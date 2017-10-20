@@ -22,7 +22,7 @@ After you have configured both credentials and raidfinder configuration, you can
 | Property | Description | Default |
 |----------|-------------|---------|
 | Raidfinder.AutoCopy | Enable auto-copy feature to clipboard | no |
-| Autopilot.Enabled | Enable sending raid codes to the [Granblue Autopilot](/Frizz925/gbf-autopilot) command server | no |
+| Autopilot.Enabled | Enable sending raid codes to the [Granblue Autopilot](https://github.com/Frizz925/gbf-autopilot) command server | no |
 | Autopilot.Port | The port number which the Autopilot is listening on | 49544 |
 | Autopilot.IntervalInSeconds | Interval for each raid code to be sent to the Autopilot | 1 |
 | Bosses.English | Boss names in English separated by comma | - |
