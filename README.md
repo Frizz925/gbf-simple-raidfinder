@@ -7,7 +7,9 @@
 ## Getting started
 After cloning this repository, install the required Python packages by running the following command.
 
-`pip install -r requirements.txt`
+```sh
+pip install -r requirements.txt
+```
 
 There are two files that you need to copy and configure before you can actually start the raidfinder up and running. They are:
 - *.env.example* -> *.env*
@@ -17,7 +19,9 @@ The *.env* file contains your [Twitter API credentials](https://apps.twitter.com
 
 After you have configured both credentials and raidfinder configuration, you can start the raidfinder by running the following command.
 
-`python main.py`
+```sh
+python main.py
+```
 
 ## Configuration
 
