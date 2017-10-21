@@ -24,6 +24,7 @@ After you have configured both credentials and raidfinder configuration, you can
 | Property | Description | Default |
 |----------|-------------|---------|
 | Raidfinder.AutoCopy | Enable auto-copy feature to clipboard | no |
+| Raidfinder.OnlyPrintCodes | Raidfinder will only print raid codes | no |
 | Autopilot.Enabled | Enable sending raid codes to the [Granblue Autopilot](https://github.com/Frizz925/gbf-autopilot) command server | no |
 | Autopilot.Port | The port number which the Autopilot is listening on | 49544 |
 | Autopilot.IntervalInSeconds | Interval for each raid code to be sent to the Autopilot | 1 |

@@ -83,12 +83,17 @@ class RaidListener(tweepy.StreamListener):
 		return parsed
 
 	def handleTweet(self, tweet):
-		message = [
-			u'Found new raid:',
-			u'[Boss] %s (%s)' % (tweet['code'], tweet['boss']),
-			u'[From] %s (%s)' % (tweet['username'], tweet['name']),
-			u'[Message] %s' % tweet['message']
-		]
+		if self.config['Raidfinder']['OnlyPrintCodes'] == 'yes':
+			message = [
+				u'Found new raid: %s' % (tweet['code'])
+			]
+		else:
+			message = [
+				u'Found new raid:',
+				u'[Boss] %s (%s)' % (tweet['code'], tweet['boss']),
+				u'[From] %s (%s)' % (tweet['username'], tweet['name']),
+				u'[Message] %s' % tweet['message']
+			]
 		if self.config['Raidfinder']['AutoCopy'] == 'yes':
 			pyperclip.copy(tweet['code'])
 			message.append(u'[Action] Copied to clipboard')
